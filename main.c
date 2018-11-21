@@ -118,7 +118,7 @@ switch(key)
 	case '1':
 	{	int Op1,Op2,Result;
 
-	  cmd_lcd(0x01); // clear lcd
+	  cmd_lcd(0x01); // clear lcd or the cmd for that is 0xc0
 	  cmd_lcd(0x80);			//set cursor to ~~who knows where~~ ? 
     string_lcd("Enter Operand 1");
     Op1=keyscan();
