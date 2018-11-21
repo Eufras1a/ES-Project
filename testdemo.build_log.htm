@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Prateek\Desktop\VNIET NAGPUR\UNIVERSAL BOARD_ new  board codes\UNIVERSAL BOARD ARM\ARM 7 WITH NEW UNIVERSAL BOARD\ARM 4x4 keypad interface\testdemo.uvproj
+Project File Date:  12/19/2014
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+linking...
+Program Size: Code=2384 RO-data=16 RW-data=0 ZI-data=1256  
+FromELF: creating hex file...
+".\testdemo.axf" - 0 Error(s), 0 Warning(s).
+</pre>
+</body>
+</html>
+ed
+ 1 error
+".\testdemo.axf" - 1 Error(s), 1 Warning(s).
+Target not created
+ning(s).
+Target not created
+eypad init.
+main.c(82): warning:  #223-D: function "lcd_command" declared implicitly
+        lcd_command(0x80);                      //Set curser position 
+main.c(83): warning:  #223-D: function "lcd_string" declared implicitly
+        lcd_string("Press key ");       //Display string
+main.c(87): warning:  #223-D: function "lcd_data" declared implicitly
+        lcd_data(key);                          //Display pressed key on lcd
+main.c(91): error:  #159: declaration is incompatible with previous "keyscan_init" (declared at line 81)
+  void keyscan_init(void){
+main.c(99): warning:  #1-D: last line of file ends without a newline
+          
+main.c: 6 warnings, 2 errors
+".\testdemo.axf" - 2 Error(s), 6 Warning(s).
+Target not created
+                         //Send byte to Data port   
+lcd.h(8): error:  #20: identifier "CTRL_PORT_SET" is undefined
+          CTRL_PORT_SET |= ((unsigned long)(1)<<CTRL_EN);
+lcd.h(8): error:  #20: identifier "CTRL_EN" is undefined
+          CTRL_PORT_SET |= ((unsigned long)(1)<<CTRL_EN);
+lcd.h(16): error:  #20: identifier "CTRL_PORT_SET" is undefined
+          CTRL_PORT_SET |= ((unsigned long)(1)<<CTRL_RS);                                                               // Selects Register Select for data       
+lcd.h(16): error:  #20: identifier "CTRL_RS" is undefined
+          CTRL_PORT_SET |= ((unsigned long)(1)<<CTRL_RS);                                                               // Selects Register Select for data       
+lcd.h(17): error:  #20: identifier "DATA_PORT_CLR" is undefined
+          DATA_PORT_CLR |= DATA_PORT;           //Clear Data Port
+lcd.h(17): error:  #20: identifier "DATA_PORT" is undefined
+          DATA_PORT_CLR |= DATA_PORT;           //Clear Data Port
+lcd.h(18): error:  #20: identifier "DATA_PORT_SET" is undefined
+        DATA_PORT_SET |= ((unsigned long)byte <<D0);                                    //Send byte to Data port   
+lcd.h(18): error:  #20: identifier "D0" is undefined
+        DATA_PORT_SET |= ((unsigned long)byte <<D0);                                    //Send byte to Data port   
+lcd.h(19): error:  #20: identifier "CTRL_EN" is undefined
+          CTRL_PORT_SET |= ((unsigned long)(1)<<CTRL_EN);
+lcd.h(21): error:  #20: identifier "CTRL_PORT_CLR" is undefined
+          CTRL_PORT_CLR |= ((unsigned long)(1)<<CTRL_EN);
+lcd.h(27): error:  #20: identifier "DATA_DIR" is undefined
+          DATA_DIR |= (unsigned long)(DATA_PORT);               //initialize D0:D7 pins as output
+lcd.h(27): error:  #20: identifier "DATA_PORT" is undefined
+          DATA_DIR |= (unsigned long)(DATA_PORT);               //initialize D0:D7 pins as output
+lcd.h(28): error:  #20: identifier "CTRL_DIR" is undefined
+        CTRL_DIR |= ((unsigned long)(1)<<CTRL_RS);      //initialize RS pins as output
+lcd.h(28): error:  #20: identifier "CTRL_RS" is undefined
+        CTRL_DIR |= ((unsigned long)(1)<<CTRL_RS);      //initialize RS pins as output
+lcd.h(29): error:  #20: identifier "CTRL_EN" is undefined
+        CTRL_DIR |= ((unsigned long)(1)<<CTRL_EN);      //initialize EN pins as output   
+lcd.h(30): error:  #20: identifier "CTRL_PORT_CLR" is undefined
+        CTRL_PORT_CLR |= ((unsigned long)(1)<<CTRL_EN);                 //clear EN
+keypad.h(40): warning:  #1-D: last line of file ends without a newline
+  }
+main.c(18): warning:  #223-D: function "lcd_init" declared implicitly
+        lcd_init();                                     //lcd init.
+main.c(19): warning:  #223-D: function "keyscan_init" declared implicitly
+        keyscan_init();                         //Keypad init.
+main.c(20): warning:  #223-D: function "lcd_command" declared implicitly
+        lcd_command(0x80);                      //Set curser position 
+main.c(21): warning:  #223-D: function "lcd_string" declared implicitly
+        lcd_string("Press key ");       //Display string
+main.c(25): warning:  #223-D: function "lcd_data" declared implicitly
+        lcd_data(key);                          //Display pressed key on lcd
+main.c(29): error:  #159: declaration is incompatible with previous "keyscan_init" (declared at line 19)
+  void keyscan_init(void){
+main.c(37): warning:  #1-D: last line of file ends without a newline
+          
+main.c: 7 warnings, 23 errors
+".\testdemo.axf" - 23 Error(s), 7 Warning(s).
+Target not created
